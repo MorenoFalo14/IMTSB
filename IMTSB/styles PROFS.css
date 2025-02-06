@@ -233,6 +233,14 @@ body {
     .hero .overlay h1 {
         font-size: 60px;
     }
+
+    .main {
+        padding: 80px 10px 20px;
+    }
+    .professor {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
 @media (max-width: 480px) {
