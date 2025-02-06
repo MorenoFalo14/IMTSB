@@ -146,9 +146,21 @@ body {
     max-width: 600px;
     margin: 0 auto;
 }
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
 .professors {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
 }
@@ -179,6 +191,22 @@ body {
 .professor a {
     color: #d9534f;
     text-decoration: none;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.slider-nav button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
 }
 
 @media (max-width: 963px) {
