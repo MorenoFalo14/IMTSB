@@ -5,6 +5,58 @@
     <title>IMTSB - Cursos</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link href="styles IMTSB.css" rel="stylesheet"/>
+
+    <!--separador-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+        }
+        .carousel-item {
+            scroll-snap-align: start;
+            flex: none;
+            width: 100%;
+            max-width: 25%; /* Adjust based on the number of visible items */
+            margin-right: 1rem;
+        }
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px; /* Adjust based on the number of visible items */
+            margin: auto;
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+        .carousel-button.left {
+            left: 0;
+        }
+        .carousel-button.right {
+            right: 0;
+        }
+        .fas {
+            color: blue;
+        }
+        @media (max-width: 768px) {
+            .carousel-item {
+                max-width: 100%;
+                margin-right: 0;
+            }
+            .carousel-container {
+                max-width: 100%;
+            }
+        }
+    </style>
+
 </head>
 <body>
     <div class="navbar">
@@ -35,60 +87,162 @@
                 <h1>NOSSOS CURSOS</h1>
             </div>
         </div>
-        <div class="slider">
-            <div class="container slider-container">
-                <div class="card">
-                    <h2>1</h2>
-                    <h3>INFORMÁTICA</h3>
-                    <a class="more-info" href="#">Saiba mais</a>
+        <div class="container mx-auto py-10">
+            <div class="carousel-container">
+                <button class="carousel-button left" onclick="scrollCarousel(-1)">
+                    <i class="fas fa-chevron-left"> </i>
+                </button>
+                <div class="carousel" id="carousel">
+                    <!-- Card 1 -->
+                    <div class="carousel-item bg-white p-6 shadow-md flex flex-col justify-between">
+                        <div>
+                            <h1 class="text-4xl text-blue-900">1</h1>
+                            <hr class="border-t-2 border-blue-900 w-8 my-2">
+                            <p class="text-2xl text-blue-900">INFORMÁTICA</p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="border border-red-500 text-blue-900 px-4 py-2 mt-4">Saiba mais</button>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="carousel-item bg-white p-6 shadow-md flex flex-col justify-between">
+                        <div>
+                            <h1 class="text-4xl text-blue-900">2</h1>
+                            <hr class="border-t-2 border-blue-900 w-8 my-2">
+                            <p class="text-2xl text-blue-900">PETROQUÍMICA</p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="border border-red-500 text-blue-900 px-4 py-2 mt-4">Saiba mais</button>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="carousel-item bg-white p-6 shadow-md flex flex-col justify-between">
+                        <div>
+                            <h1 class="text-4xl text-blue-900">3</h1>
+                            <hr class="border-t-2 border-blue-900 w-8 my-2">
+                            <p class="text-2xl text-blue-900">AMBIENTE E CONTROLO DE QUALIDADE</p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="border border-red-500 text-blue-900 px-4 py-2 mt-4">Saiba mais</button>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="carousel-item bg-white p-6 shadow-md flex flex-col justify-between">
+                        <div>
+                            <h1 class="text-4xl text-blue-900">4</h1>
+                            <hr class="border-t-2 border-blue-900 w-8 my-2">
+                            <p class="text-2xl text-blue-900">CONTABILIDADE E GESTÃO</p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="border border-red-500 text-blue-900 px-4 py-2 mt-4">Saiba mais</button>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="carousel-item bg-white p-6 shadow-md flex flex-col justify-between">
+                        <div>
+                            <h1 class="text-4xl text-blue-900">5</h1>
+                            <hr class="border-t-2 border-blue-900 w-8 my-2">
+                            <p class="text-2xl text-blue-900">GESTÃO EMPRESARIAL</p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="border border-red-500 text-blue-900 px-4 py-2 mt-4">Saiba mais</button>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="carousel-item bg-white p-6 shadow-md flex flex-col justify-between">
+                        <div>
+                            <h1 class="text-4xl text-blue-900">6</h1>
+                            <hr class="border-t-2 border-blue-900 w-8 my-2">
+                            <p class="text-2xl text-blue-900">ESTATÍSTICA E PLANEAMENTO</p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="border border-red-500 text-blue-900 px-4 py-2 mt-4">Saiba mais</button>
+                        </div>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="carousel-item bg-white p-6 shadow-md flex flex-col justify-between">
+                        <div>
+                            <h1 class="text-4xl text-blue-900">7</h1>
+                            <hr class="border-t-2 border-blue-900 w-8 my-2">
+                            <p class="text-2xl text-blue-900">ELECTRÓNICA E TELECOMUNICAÇÕES</p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="border border-red-500 text-blue-900 px-4 py-2 mt-4">Saiba mais</button>
+                        </div>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="carousel-item bg-white p-6 shadow-md flex flex-col justify-between">
+                        <div>
+                            <h1 class="text-4xl text-blue-900">8</h1>
+                            <hr class="border-t-2 border-blue-900 w-8 my-2">
+                            <p class="text-2xl text-blue-900">ENERGIA E INSTALAÇÕES ELÉCTRICAS</p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="border border-red-500 text-blue-900 px-4 py-2 mt-4">Saiba mais</button>
+                        </div>
+                    </div>
+                    <!-- Card 9 -->
+                    <div class="carousel-item bg-white p-6 shadow-md flex flex-col justify-between">
+                        <div>
+                            <h1 class="text-4xl text-blue-900">9</h1>
+                            <hr class="border-t-2 border-blue-900 w-8 my-2">
+                            <p class="text-2xl text-blue-900">DESENHADOR PROJECTISTA</p>
+                        </div>
+                        <div class="mt-4">
+                            <button class="border border-red-500 text-blue-900 px-4 py-2 mt-4">Saiba mais</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <h2>2</h2>
-                    <h3>PETROQUÍMICA</h3>
-                    <a class="more-info" href="#">Saiba mais</a>
-                </div>
-                <div class="card">
-                    <h2>3</h2>
-                    <h3>AMBIENTE E CONTROLO DE QUALIDADE</h3>
-                    <a class="more-info" href="#">Saiba mais</a>
-                </div>
-                <div class="card">
-                    <h2>4</h2>
-                    <h3>CONTABILIDADE E GESTÃO</h3>
-                    <a class="more-info" href="#">Saiba mais</a>
-                </div>
-                <div class="card">
-                    <h2>5</h2>
-                    <h3>GESTÃO EMPRESARIAL</h3>
-                    <a class="more-info" href="#">Saiba mais</a>
-                </div>
-                <div class="card">
-                    <h2>6</h2>
-                    <h3>ESTATÍSTICA E PLANEAMENTO</h3>
-                    <a class="more-info" href="#">Saiba mais</a>
-                </div>
-                <div class="card">
-                    <h2>7</h2>
-                    <h3>ELECTRÓNICA E TELECOMUNICAÇÕES</h3>
-                    <a class="more-info" href="#">Saiba mais</a>
-                </div>
-                <div class="card">
-                    <h2>8</h2>
-                    <h3>ENERGIA E INSTALAÇÕES ELÉCTRICAS</h3>
-                    <a class="more-info" href="#">Saiba mais</a>
-                </div>
-                <div class="card">
-                    <h2>9</h2>
-                    <h3>DESENHADOR PROJECTISTA</h3>
-                    <a class="more-info" href="#">Saiba mais</a>
-                </div>
-            </div>
-            <div class="slider-nav">
-                <button id="prev">❮</button>
-                <button id="next">❯</button>
+                <button class="carousel-button right" onclick="scrollCarousel(1)">
+                    <i class="fas fa-chevron-right"> </i>
+                </button>
             </div>
         </div>
     </section>
     <script src="script IMTSB.js"></script>
+
+    <script>
+        let currentIndex = 0;
+        const carousel = document.getElementById('carousel');
+
+        function scrollCarousel(direction) {
+            const scrollAmount = carousel.clientWidth / 4; // Adjust based on the number of visible items
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = carousel.children.length - 4; // Adjust based on the number of visible items
+            } else if (currentIndex >= carousel.children.length - 3) {
+                currentIndex = 0;
+            }
+            carousel.scrollTo({ left: currentIndex * scrollAmount, behavior: 'smooth' });
+        }
+
+        function autoScroll() {
+            scrollCarousel(1);
+        }
+
+        setInterval(autoScroll, 5000); // Change slide every 5 seconds
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carousel.addEventListener('touchstart', (event) => {
+            touchStartX = event.changedTouches[0].screenX;
+        });
+
+        carousel.addEventListener('touchend', (event) => {
+            touchEndX = event.changedTouches[0].screenX;
+            handleGesture();
+        });
+
+        function handleGesture() {
+            if (touchEndX < touchStartX) {
+                scrollCarousel(1);
+            }
+            if (touchEndX > touchStartX) {
+                scrollCarousel(-1);
+            }
+        }
+    </script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </body>
 </html>
