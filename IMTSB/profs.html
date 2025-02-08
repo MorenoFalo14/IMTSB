@@ -5,6 +5,42 @@
     <title>IMTSB - Professores</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link href="styles PROFS.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
+    <style>
+        .carousel {
+       display: flex;
+       overflow-x: auto;
+       scroll-snap-type: x mandatory;
+       scroll-behavior: smooth;
+     }
+     
+     .carousel-item {
+       flex: none;
+       scroll-snap-align: start;
+       width: 100vw;
+       display: flex;
+       justify-content: space-around;
+       gap: 16px;
+     }
+     
+     .carousel::-webkit-scrollbar {
+       display: none;
+     }
+     
+     .carousel {
+       -ms-overflow-style: none;
+       scrollbar-width: none;
+     }
+     
+     @media (max-width: 768px) {
+       .carousel-item {
+         flex-direction: column;
+         align-items: center;
+       }
+     }
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -36,105 +72,251 @@
             </div>
         </div>
         <main class="main">
-            <h1>
-             Nossos professores
-            </h1>
+            <h1>Nossos professores</h1>
             <p>
              Sou um parágrafo. Aqui você pode adicionar e editar seu próprio texto. Basta clicar em "Editar texto" ou clicar duas vezes sobre mim. Você também pode alterar a fonte e mais. Sou um ótimo lugar para você compartilhar a sua história com os visitantes.
             </p>
-            <div class="slider">
-                <div class="professors  slider-container">
-                    <div class="professor">
-                        <img alt="Foto de Ricardo Alves" src="https://placehold.co/250x250"/>
-                        <p>Professor de Ciência</p>
-                        <h3>Ricardo Alves</h3>
-                        <a href="mailto:info@meusite.com">info@meusite.com</a>
-                    </div>
-             
-                    <div class="professor">
-                        <img alt="Foto de Lucas Lima" src="https://placehold.co/250x250"/>
-                        <p>Professor de Filosofia</p>
-                        <h3>Lucas Lima</h3>
-                        <a href="mailto:info@meusite.com">info@meusite.com</a>
-                    </div>
+            <div class="container mx-auto py-8">
+                <div class="relative">
+                    <div class="carousel" id="carousel">
+                        <div class="carousel-item">
 
-                    <div class="professor">
-                        <img alt="Foto de Lucas Lima" src="https://placehold.co/250x250"/>
-                        <p>Professor de Filosofia</p>
-                        <h3>Lucas Lima</h3>
-                        <a href="mailto:info@meusite.com">info@meusite.com</a>
-                    </div>
+                            <div class="text-center">
+                                <img alt="Foto de Cristina Moreira" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/kLQnDmiekoOYNmFypmc34l4SzJ3CjQW64oBTqRkM8Dw.jpg" width="300"/>
+                                <p class="text-gray-600">Professora de Sociologia</p>
+                                <h2 class="text-xl font-bold text-blue-900">Cristina Moreira</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
 
-                    <div class="professor">
-                        <img alt="Foto de Lucas Lima" src="https://placehold.co/250x250"/>
-                        <p>Professor de Filosofia</p>
-                        <h3>Lucas Lima</h3>
-                        <a href="mailto:info@meusite.com">info@meusite.com</a>
-                    </div>
+                            <div class="text-center">
+                                <img alt="Foto de Gustavo Marco" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/hTDUHscrWg_XjI2Do_t0KO6s7cTd6e0rnQOnjm_OEyE.jpg" width="300"/>
+                                <p class="text-gray-600">Professor de Biologia</p>
+                                <h2 class="text-xl font-bold text-blue-900">Gustavo Marco</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
 
-                    <div class="professor">
-                        <img alt="Foto de Lucas Lima" src="https://placehold.co/250x250"/>
-                        <p>Professor de Filosofia</p>
-                        <h3>Lucas Lima</h3>
-                        <a href="mailto:info@meusite.com">info@meusite.com</a>
-                    </div>
+                            <div class="text-center">
+                                <img alt="Foto de Evaristo Santos" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/xk78IHf14-xnB13XPw8M-UBbQ2-cjdYEK2SrTqf3wJ0.jpg" width="300"/>
+                                <p class="text-gray-600">Professor de Economia</p>
+                                <h2 class="text-xl font-bold text-blue-900">Evaristo Santos</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
 
-                    <div class="professor">
-                        <img alt="Foto de Lucas Lima" src="https://placehold.co/250x250"/>
-                        <p>Professor de Filosofia</p>
-                        <h3>Lucas Lima</h3>
-                        <a href="mailto:info@meusite.com">info@meusite.com</a>
-                    </div>
+                            <div class="text-center">
+                                <img alt="Foto de Márcia Silva" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/N1qe5XZEpJA-iPj6ZyGmcDethDKf1kC0Od8sRFO2A6o.jpg" width="300"/>
+                                <p class="text-gray-600">Professora de Design</p>
+                                <h2 class="text-xl font-bold text-blue-900">Márcia Silva</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
+                            </div>
+                            <div class="carousel-item">
 
-                    <div class="professor">
-                        <img alt="Foto de Lucas Lima" src="https://placehold.co/250x250"/>
-                        <p>Professor de Filosofia</p>
-                        <h3>Lucas Lima</h3>
-                        <a href="mailto:info@meusite.com">info@meusite.com</a>
-                    </div>
+                            <div class="text-center">
+                                <img alt="Foto de Professor 5" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/YsvPI_sgc2015WMV8WL3jMJVu6Zf4-D8Wa1syOsZAXU.jpg" width="300"/>
+                                <p class="text-gray-600">Professor de Matemática</p>
+                                <h2 class="text-xl font-bold text-blue-900">Professor 5</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
 
-                    <div class="professor">
-                        <img alt="Foto de Lucas Lima" src="https://placehold.co/250x250"/>
-                        <p>Professor de Filosofia</p>
-                        <h3>Lucas Lima</h3>
-                        <a href="mailto:info@meusite.com">info@meusite.com</a>
-                    </div>
+                            <div class="text-center">
+                                <img alt="Foto de Professor 6" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/Oy6twj8ZOEmvCQQcHgNRiXLDK3Bd8TnpXkr05Dp6X-U.jpg" width="300"/>
+                                <p class="text-gray-600">Professor de Física</p>
+                                <h2 class="text-xl font-bold text-blue-900">Professor 6</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
 
-                    <div class="professor">
-                        <img alt="Foto de Lucas Lima" src="https://placehold.co/250x250"/>
-                        <p>Professor de Filosofia</p>
-                        <h3>Lucas Lima</h3>
-                        <a href="mailto:info@meusite.com">info@meusite.com</a>
-                    </div>
+                            <div class="text-center">
+                                <img alt="Foto de Professor 7" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/ENAIMhOrtIuy8loVu-opjNUxjEPQNT6guMiUEAdgTa8.jpg" width="300"/>
+                                <p class="text-gray-600">Professor de Química</p>
+                                <h2 class="text-xl font-bold text-blue-900">Professor 7</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
 
-                    <div class="professor">
-                        <img alt="Foto de Lucas Lima" src="https://placehold.co/250x250"/>
-                        <p>Professor de Filosofia</p>
-                        <h3>Lucas Lima</h3>
-                        <a href="mailto:info@meusite.com">info@meusite.com</a>
-                    </div>
+                            <div class="text-center">
+                                <img alt="Foto de Professor 8" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/637Ak7goRBszzsFE5gHRGXdV6klJAU3ugOzBRH8P5Rk.jpg" width="300"/>
+                                <p class="text-gray-600">Professor de História</p>
+                                <h2 class="text-xl font-bold text-blue-900">Professor 8</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
+                            </div>
+                            <div class="carousel-item">
 
-                    <div class="professor">
-                        <img alt="Foto de Lucas Lima" src="https://placehold.co/250x250"/>
-                        <p>Professor de Filosofia</p>
-                        <h3>Lucas Lima</h3>
-                        <a href="mailto:info@meusite.com">info@meusite.com</a>
-                    </div>
+                            <div class="text-center">
+                                <img alt="Foto de Professor 9" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/b4Btido0B0-51fpInne6fEOPnjv00rusb0sDtKBtX0I.jpg" width="300"/>
+                                <p class="text-gray-600">Professor de Geografia</p>
+                                <h2 class="text-xl font-bold text-blue-900">Professor 9</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
 
-                    <div class="professor">
-                        <img alt="Foto de Lucas Lima" src="https://placehold.co/250x250"/>
-                        <p>Professor de Filosofia</p>
-                        <h3>Lucas Lima</h3>
-                        <a href="mailto:info@meusite.com">info@meusite.com</a>
+                            <div class="text-center">
+                                <img alt="Foto de Professor 10" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/JEPJIMNLUg9GI8Y9HWoO7adSJsoxs2PSsPnA2fBO4fM.jpg" width="300"/>
+                                <p class="text-gray-600">Professor de Filosofia</p>
+                                <h2 class="text-xl font-bold text-blue-900">Professor 10</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
+
+                            <div class="text-center">
+                                <img alt="Foto de Professor 11" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/lovg6Zr1fB8ryKRMFON7086cZA_1fOn8UDBIiWimDiI.jpg" width="300"/>
+                                <p class="text-gray-600">Professor de Sociologia</p>
+                                <h2 class="text-xl font-bold text-blue-900">Professor 11</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
+
+                            <div class="text-center">
+                                <img alt="Foto de Professor 12" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/sUmSMCq2j3wYRh-C6GhMy5rcmvDyswxImhL65B15NIg.jpg" width="300"/>
+                                <p class="text-gray-600">Professor de Biologia</p>
+                                <h2 class="text-xl font-bold text-blue-900">Professor 12</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
+                            </div>
+                            <div class="carousel-item">
+
+                            <div class="text-center">
+                                <img alt="Foto de Professor 13" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/VXdAA7knceb9AUZMu-RJGoUez0fnkq1ZYJla6Vu4FnY.jpg" width="300"/>
+                                <p class="text-gray-600">Professor de Economia</p>
+                                <h2 class="text-xl font-bold text-blue-900">Professor 13</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
+
+                            <div class="text-center">
+                                <img alt="Foto de Professor 14" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/JLV2LTR3TaqDBGW7Tjk9rywRB4r6DsVGddotH2V3IUQ.jpg" width="300"/>
+                                <p class="text-gray-600">Professor de Design</p>
+                                <h2 class="text-xl font-bold text-blue-900">Professor 14</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
+
+                            <div class="text-center">
+                                <img alt="Foto de Professor 15" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/E2GRDf8mAOdLC6ks1zbQv2oM09ZWvS2jLtPIFDWTW8I.jpg" width="300"/>
+                                <p class="text-gray-600">Professor de Matemática</p>
+                                <h2 class="text-xl font-bold text-blue-900">Professor 15</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
+
+                            <div class="text-center">
+                                <img alt="Foto de Professor 16" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/oWBeeipqeoFrzLW_SvSu48H2HbAkkrH2-HPzMSYFLu0.jpg" width="300"/>
+                                <p class="text-gray-600">Professor de Física</p>
+                                <h2 class="text-xl font-bold text-blue-900">Professor 16</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
+                            </div>
+                            <div class="carousel-item">
+
+                            <div class="text-center">
+                                <img alt="Foto de Professor 17" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/M4f1_iaTo_dYDRiG70CEYUhmdQzCQ7lL00pJ1BRC_5w.jpg" width="300"/>
+                                <p class="text-gray-600">Professor de Química</p>
+                                <h2 class="text-xl font-bold text-blue-900">Professor 17</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
+
+                            <div class="text-center">
+                                <img alt="Foto de Professor 18" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/B4ZDdTo1jrt_LFZPsomb5863nbuhksBpEAoLwPSp8mY.jpg" width="300"/>
+                                <p class="text-gray-600">Professor de História</p>
+                                <h2 class="text-xl font-bold text-blue-900">Professor 18</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
+
+                            <div class="text-center">
+                                <img alt="Foto de Professor 19" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/4FfKjYduR5WOsKYPjsmHYceaaymPsuFUAf83TuASBjM.jpg" width="300"/>
+                                <p class="text-gray-600">Professor de Geografia</p>
+                                <h2 class="text-xl font-bold text-blue-900">Professor 19</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
+
+                            <div class="text-center">
+                                <img alt="Foto de Professor 20" class="mx-auto mb-4 rounded" height="300" src="https://storage.googleapis.com/a1aa/image/hknLYxQvN2XOJqY23tKMtjPObTCdIUxIZGRBekwO-MI.jpg" width="300"/>
+                                <p class="text-gray-600">Professor de Filosofia</p>
+                                <h2 class="text-xl font-bold text-blue-900">Professor 20</h2>
+                                <p class="text-red-600">info@meusite.com</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="slider-nav">
-                    <button id="prev">❮</button>
-                    <button id="next">❯</button>
+                    <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full" id="prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full" id="next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </main>
     </section>
     <script src="script PROFS.js"></script>
+
+    <script>
+        const carousel = document.getElementById('carousel');
+     const nextButton = document.getElementById('next');
+     const prevButton = document.getElementById('prev');
+     
+     let scrollAmount = 0;
+     const scrollStep = carousel.clientWidth / 4;
+     
+     const scrollNext = () => {
+       if (scrollAmount < carousel.scrollWidth - carousel.clientWidth) {
+         scrollAmount += scrollStep;
+         carousel.scrollTo({
+           top: 0,
+           left: scrollAmount,
+           behavior: 'smooth'
+         });
+       } else {
+         scrollAmount = 0;
+         carousel.scrollTo({
+           top: 0,
+           left: scrollAmount,
+           behavior: 'smooth'
+         });
+       }
+     };
+     
+     const scrollPrev = () => {
+       if (scrollAmount > 0) {
+         scrollAmount -= scrollStep;
+         carousel.scrollTo({
+           top: 0,
+           left: scrollAmount,
+           behavior: 'smooth'
+         });
+       } else {
+         scrollAmount = carousel.scrollWidth - carousel.clientWidth;
+         carousel.scrollTo({
+           top: 0,
+           left: scrollAmount,
+           behavior: 'smooth'
+         });
+       }
+     };
+     
+     nextButton.addEventListener('click', scrollNext);
+     prevButton.addEventListener('click', scrollPrev);
+     
+     setInterval(scrollNext, 5000);
+     
+     carousel.addEventListener('touchstart', handleTouchStart, false);
+     carousel.addEventListener('touchmove', handleTouchMove, false);
+     
+     let xDown = null;
+     
+     function handleTouchStart(evt) {
+       const firstTouch = evt.touches[0];
+       xDown = firstTouch.clientX;
+     }
+     
+     function handleTouchMove(evt) {
+       if (!xDown) {
+         return;
+       }
+     
+       let xUp = evt.touches[0].clientX;
+       let xDiff = xDown - xUp;
+     
+       if (xDiff > 0) {
+         scrollNext();
+       } else {
+         scrollPrev();
+       }
+     
+       xDown = null;
+     }
+       </script>
 </body>
 </html>
