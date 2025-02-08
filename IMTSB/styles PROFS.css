@@ -147,68 +147,6 @@ body {
     margin: 0 auto;
 }
 
-.slider {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-.slider-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.professors {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-.professor {
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 20px;
-    text-align: center;
-    width: 250px;
-}
-.professor img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-.professor h3 {
-    font-size: 1.2em;
-    color: #0056b3;
-    margin: 10px 0 5px;
-}
-.professor p {
-    font-size: 0.9em;
-    color: #666;
-    margin: 5px 0;
-}
-.professor a {
-    color: #d9534f;
-    text-decoration: none;
-}
-
-.slider-nav {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
-.slider-nav button {
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-}
-
 @media (max-width: 963px) {
     .navbar .menu {
         display: none;
@@ -251,10 +189,6 @@ body {
     .main {
         padding: 80px 10px 20px;
     }
-    .professor {
-        width: 100%;
-        max-width: 300px;
-    }
 }
 
 @media(max-width: 777px){
@@ -265,11 +199,7 @@ body {
     .main {
         padding: 80px 10px 20px;
     }
-    .professor {
-        width: 100%;
-        max-width: 300px;
     }
-}
 
 @media (max-width: 480px) {
     .hero .overlay h1 {
@@ -281,15 +211,6 @@ body {
     }
     .main p {
         font-size: 0.9em;
-    }
-    .professor {
-        padding: 15px;
-    }
-    .professor h3 {
-        font-size: 1em;
-    }
-    .professor p {
-        font-size: 0.8em;
     }
 }
 
