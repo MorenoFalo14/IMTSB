@@ -95,3 +95,20 @@ a{
 .profile .status{
     color: #fff;
 }
+
+@media (max-width: 768px) {
+    .black-bg .links {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .black-bg .links.active {
+        display: flex;
+    }
+}
