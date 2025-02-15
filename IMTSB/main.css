@@ -69,3 +69,29 @@ a{
 .black-bg .links .A{
     border-right: 0px;
 }
+
+.navbar .profile{
+    background-color: rgb(220, 20, 20);
+    display: flex;
+    position: absolute;
+    align-items: center;
+    height: 70px;
+    padding: 10px;
+    width: 250px; 
+    margin-left: 940px;
+}
+
+.profile .profile-img img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.profile .nome{
+    color: #fff;
+}
+
+.profile .status{
+    color: #fff;
+}
